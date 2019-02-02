@@ -12,7 +12,7 @@
 					<Input name="Iwerk" id="Iwerk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Iwerk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:4, nullable:false } }"/>
 
 					<Label text="Functional loc." required="true"/>
-					<Input name="Tplnr" id="ShnFunctLoc_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'ShnFunctLoc', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
+					<Input name="Tplnr" id="ShnFunctLoc_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Tplnr', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
 					<ComboBox xmlns="sap.m" id="cbFuncLoc" items="{valueHelp>/funcLocSet}" selectedKey="{Tplnr}">
 				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Tplnr}" text="{valueHelp>Pltxt}" id="itemCbFuncLoc"/>
 					</ComboBox>
