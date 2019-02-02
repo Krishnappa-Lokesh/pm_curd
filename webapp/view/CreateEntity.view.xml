@@ -1,0 +1,64 @@
+<mvc:View controllerName="com.pe.pm.curd.pm_curd.controller.CreateEntity" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:smart="sap.ui.comp.smartfield" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" title="{viewModel>/viewTitle}" busy="{viewModel>/busy}">
+		<semantic:content>
+			<f:SimpleForm class="editableForm" columnsL="1" columnsM="1" editable="true" emptySpanL="4" emptySpanM="4" id="newEntitySimpleForm" labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024" title="{= ${viewModel>/mode} === 'edit'? 'Edit Z_PM_NOTIF_SRV.pmNotification': 'New Z_PM_NOTIF_SRV.pmNotification'}">
+				<f:content>
+					<Label text="Notification" required="true"/>
+					<Input name="Qmnum" id="Qmnum_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Qmnum', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
+					<Label text="Description" required="true"/>
+					<Input name="Qmtxt" id="Qmtxt_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Qmtxt', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
+					<Label text="Functional loc." required="true"/>
+					<Input name="ShnFunctLoc" id="ShnFunctLoc_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'ShnFunctLoc', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
+					<ComboBox xmlns="sap.m" id="cbFuncLoc" items="{valueHelp>/funcLocSet}" selectedKey="{ShnFunctLoc}">
+				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Tplnr}" text="{valueHelp>Pltxt}" id="itemCbFuncLoc"/>
+					</ComboBox>
+
+					<Label text="Equipment" required="true"/>
+					<Input name="ShnEquipment" id="ShnEquipment_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'ShnEquipment', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:18, nullable:false } }"/>
+					<Label text="Planner group" required="true"/>
+					<Input name="Ingrp" id="Ingrp_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Ingrp', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:3, nullable:false } }"/>
+					<ComboBox xmlns="sap.m" id="cbPlnrGrp" items="{valueHelp>/plnrGrpSet}" selectedKey="{Ingrp}">
+				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Ingrp}" text="{valueHelp>Innam}" id="itemCbPlnrGrp"/>
+					</ComboBox>
+
+					<Label text="Planning plant" required="true"/>
+					<Input name="Iwerk" id="Iwerk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Iwerk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:4, nullable:false } }"/>
+					<Label text="Main WorkCtr" required="true"/>
+					<Input name="Gewrk" id="Gewrk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Gewrk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:8, nullable:false } }"/>
+					<ComboBox xmlns="sap.m" id="cbMnWrkCtr" items="{valueHelp>/mnWrkCtrSet}" selectedKey="{Gewrk}">
+				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Arbpl}" text="{valueHelp>KtextUp}" id="itemCbMnWrkCtr"/>
+					</ComboBox>
+
+					<Label text="Plant" required="true"/>
+					<Input name="Swerk" id="Swerk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Swerk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:4, nullable:false } }"/>
+					<Label text="Reported by" required="true"/>
+					<Input name="Qmnam" id="Qmnam_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Qmnam', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
+					<Label text="Notif.date" required="true"/>
+					<DatePicker name="Qmdat" value="{ path: 'Qmdat', type: 'sap.ui.model.type.DateTime'}" id="Qmdat_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
+					<Label text="Notif. Time" required="true"/>
+					<Input name="Mzeit" id="Mzeit_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Mzeit', type: 'sap.ui.model.odata.type.Time' , constraints:{ nullable:false } }"/>
+					<Label text="Req. start" required="true"/>
+					<DatePicker name="Strmn" value="{ path: 'Strmn', type: 'sap.ui.model.type.DateTime'}" id="Strmn_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
+					<Label text="Req. start time" required="true"/>
+					<Input name="Strur" id="Strur_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Strur', type: 'sap.ui.model.odata.type.Time' , constraints:{ nullable:false } }"/>
+					<Label text="Priority" required="true"/>
+					<Input name="Priok" id="Priok_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Priok', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:1, nullable:false } }"/>
+					<Label text="Created by" required="true"/>
+					<Input name="Ernam" id="Ernam_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Ernam', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
+					<Label text="Created on" required="true"/>
+					<DatePicker name="Erdat" value="{ path: 'Erdat', type: 'sap.ui.model.type.DateTime'}" id="Erdat_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
+
+				
+					
+					
+				</f:content>
+			</f:SimpleForm>
+		</semantic:content>
+		<semantic:saveAction>
+			<semantic:SaveAction id="save" enabled="{viewModel>/enableCreate}" press="onSave"/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction id="cancel" press="onCancel"/>
+		</semantic:cancelAction>
+	</semantic:DetailPage>
+</mvc:View>

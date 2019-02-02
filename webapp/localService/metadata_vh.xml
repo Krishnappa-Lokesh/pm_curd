@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Z_PM_VALUELIST_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="funcLoc" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Tplnr"/>
+				</Key>
+				<Property Name="Tplnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Functional loc." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Pltxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="plnrGrp" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Ingrp"/>
+				</Key>
+				<Property Name="Ingrp" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Planner group" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Innam" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="PM PlGrp name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="mnWrkCtr" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Arbpl"/>
+				</Key>
+				<Property Name="Arbpl" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Work center" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="KtextUp" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityContainer Name="Z_PM_VALUELIST_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="funcLocSet" EntityType="Z_PM_VALUELIST_SRV.funcLoc" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="plnrGrpSet" EntityType="Z_PM_VALUELIST_SRV.plnrGrp" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="mnWrkCtrSet" EntityType="Z_PM_VALUELIST_SRV.mnWrkCtr" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="http://cadsapfe.paperexcellence.com/sap/opu/odata/sap/Z_PM_VALUELIST_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://cadsapfe.paperexcellence.com/sap/opu/odata/sap/Z_PM_VALUELIST_SRV/$metadata"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

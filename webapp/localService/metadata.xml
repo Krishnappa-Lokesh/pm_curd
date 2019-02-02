@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+   <edmx:DataServices m:DataServiceVersion="2.0">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Z_PM_NOTIF_SRV" xml:lang="en" sap:schema-version="1">
+         <EntityType Name="pmNotification" sap:content-version="1">
+            <Key>
+               <PropertyRef Name="Qmnum" />
+            </Key>
+            <Property Name="Qmnum" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Notification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Qmtxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ShnFunctLoc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Functional loc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="ShnEquipment" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Equipment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Ingrp" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Planner group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Iwerk" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Planning plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Gewrk" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Main WorkCtr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Swerk" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Qmnam" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Reported by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Qmdat" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Notif.date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Mzeit" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Notif. Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Strmn" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Req. start" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Strur" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Req. start time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Priok" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Priority" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Created by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Erdat" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Created on" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+         </EntityType>
+         <EntityContainer Name="Z_PM_NOTIF_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+            <EntitySet Name="pmNotificationSet" EntityType="Z_PM_NOTIF_SRV.pmNotification" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+         </EntityContainer>
+         <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://cadsapfe.paperexcellence.com/sap/opu/odata/sap/Z_PM_NOTIF_SRV/$metadata" />
+         <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://cadsapfe.paperexcellence.com/sap/opu/odata/sap/Z_PM_NOTIF_SRV/$metadata" />
+      </Schema>
+   </edmx:DataServices>
+</edmx:Edmx>
