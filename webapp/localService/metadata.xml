@@ -13,7 +13,7 @@
             <Property Name="Iwerk" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Planning plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
             <Property Name="Tplnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Functional loc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
             <Property Name="Ingrp" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Planner group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-            <Property Name="Gewrk" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Main WorkCtr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            <Property Name="Arbpl" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Main WorkCtr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
             <Property Name="Priok" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Priority" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
             <Property Name="Auswk" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Effect" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
             <Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Created by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
