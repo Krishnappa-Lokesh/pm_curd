@@ -1,4 +1,13 @@
-<mvc:View controllerName="com.pe.pm.curd.pm_curd.controller.CreateEntity" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:smart="sap.ui.comp.smartfield" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+<mvc:View controllerName="com.pe.pm.curd.pm_curd.controller.CreateEntity" 
+			xmlns="sap.m" 
+			xmlns:core="sap.ui.core" 
+			xmlns:f="sap.ui.layout.form" 
+			xmlns:l="sap.ui.layout" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns:smart="sap.ui.comp.smartfield" 
+			xmlns:semantic="sap.m.semantic" 
+			xmlns:footerbar="sap.ushell.ui.footerbar" 
+			xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" title="{viewModel>/viewTitle}" busy="{viewModel>/busy}">
 		<semantic:content>
 			<f:SimpleForm id="newEntitySimpleForm" 
@@ -22,10 +31,7 @@
 					<ComboBox xmlns="sap.m" id="cbFuncLoc" items="{valueHelp>/funcLocSet}" selectedKey="{Tplnr}">
 				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Tplnr}" text="{valueHelp>Pltxt}" id="itemCbFuncLoc"/>
 					</ComboBox>
-					<!--
-					<Label text="Equipment" required="true"/>
-					<Input name="ShnEquipment" id="ShnEquipment_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'ShnEquipment', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:18, nullable:false } }"/>
-					-->
+
 					<Label text="Planner group" required="true"/>
 					<Input name="Ingrp" id="Ingrp_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Ingrp', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:3, nullable:false } }"/>
 					<ComboBox xmlns="sap.m" id="cbPlnrGrp" items="{valueHelp>/plnrGrpSet}" selectedKey="{Ingrp}">
@@ -38,20 +44,6 @@
 				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Arbpl}" text="{valueHelp>KtextUp}" id="itemCbMnWrkCtr"/>
 					</ComboBox>
 
-					<!--
-					<Label text="Plant" required="true"/>
-					<Input name="Swerk" id="Swerk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Swerk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:4, nullable:false } }"/>
-					<Label text="Reported by" required="true"/>
-					<Input name="Qmnam" id="Qmnam_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Qmnam', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
-					<Label text="Notif.date" required="true"/>
-					<DatePicker name="Qmdat" value="{ path: 'Qmdat', type: 'sap.ui.model.type.DateTime'}" id="Qmdat_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
-					<Label text="Notif. Time" required="true"/>
-					<Input name="Mzeit" id="Mzeit_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Mzeit', type: 'sap.ui.model.odata.type.Time' , constraints:{ nullable:false } }"/>
-					<Label text="Req. start" required="true"/>
-					<DatePicker name="Strmn" value="{ path: 'Strmn', type: 'sap.ui.model.type.DateTime'}" id="Strmn_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
-					<Label text="Req. start time" required="true"/>
-					<Input name="Strur" id="Strur_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Strur', type: 'sap.ui.model.odata.type.Time' , constraints:{ nullable:false } }"/>
-					-->
 					<Label text="Priority" required="true"/>
 					<Input name="Priok" id="Priok_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Priok', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:1, nullable:false } }"/>
 					<ComboBox xmlns="sap.m" id="cbPriok" items="{valueHelp>/priortySet}" selectedKey="{Priok}">
