@@ -10,6 +10,9 @@
 			xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" title="{viewModel>/viewTitle}" busy="{viewModel>/busy}">
 		<semantic:content>
+			
+			<core:Fragment id="formfragment" fragmentName="com.pe.pm.curd.pm_curd.view.FormEntity" type="XML" />
+			<!--
 			<f:SimpleForm id="newEntitySimpleForm" 
 						class="editableForm" editable="true" 
 						columnsL="1" columnsM="1"  
@@ -55,16 +58,17 @@
 					<ComboBox xmlns="sap.m" id="cbAuswk" items="{valueHelp>/effectSet}" selectedKey="{Auswk}">
 				        <core:Item xmlns:core="sap.ui.core" key="{valueHelp>Auswk}" text="{valueHelp>Auswkt}" id="itemCbAuswkt"/>
 					</ComboBox>
-
+					-->
 					<!--
 					<Label text="Created by" required="true"/>
 					<Input name="Ernam" id="Ernam_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true" value="{ path: 'Ernam', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
 					<Label text="Created on" required="true"/>
 					<DatePicker name="Erdat" value="{ path: 'Erdat', type: 'sap.ui.model.type.DateTime'}" id="Erdat_id" enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"/>
 					-->
-
+			<!--
 				</f:content>
 			</f:SimpleForm>
+			-->
 		</semantic:content>
 		<semantic:saveAction>
 			<semantic:SaveAction id="save" enabled="{viewModel>/enableCreate}" press="onSave"/>

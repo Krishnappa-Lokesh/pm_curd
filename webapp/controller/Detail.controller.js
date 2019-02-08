@@ -24,12 +24,12 @@ sap.ui.define([
 				busy: false,
 				delay: 0,
 				enableCreate: false,
-				mode: "create",
+				mode: "DISPLAY",
 				viewTitle: ""
 			});
 
 			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
-			this.setModel(oViewModel, "detailView");
+			this.setModel(oViewModel, "viewModel");
 			this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 			this._oODataModel = this.getOwnerComponent().getModel();
 			this._oResourceBundle = this.getResourceBundle();
@@ -44,7 +44,7 @@ sap.ui.define([
 		 * @public
 		 */
 		onShareEmailPress: function () {
-			var oViewModel = this.getModel("detailView");
+			var oViewModel = this.getModel("viewModel");
 
 			sap.m.URLHelper.triggerEmail(
 				null,
@@ -58,7 +58,7 @@ sap.ui.define([
 		 * @public
 		 */
 		onShareInJamPress: function () {
-			var oViewModel = this.getModel("detailView"),
+			var oViewModel = this.getModel("viewModel"),
 				oShareDialog = sap.ui.getCore().createComponent({
 					name: "sap.collaboration.components.fiori.sharing.dialog",
 					settings: {
@@ -79,7 +79,7 @@ sap.ui.define([
 		 */
 		onDelete: function () {
 			var that = this;
-			var oViewModel = this.getModel("detailView"),
+			var oViewModel = this.getModel("viewModel"),
 				sPath = oViewModel.getProperty("/sObjectPath"),
 				sObjectHeader = this._oODataModel.getProperty(sPath + "/Qmnum"),
 				sQuestion = this._oResourceBundle.getText("deleteText", sObjectHeader),
@@ -140,7 +140,7 @@ sap.ui.define([
 		 */
 		_bindView: function (sObjectPath) {
 			// Set busy indicator during view binding
-			var oViewModel = this.getModel("detailView");
+			var oViewModel = this.getModel("viewModel");
 
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
@@ -168,7 +168,7 @@ sap.ui.define([
 		_onBindingChange: function () {
 			var oView = this.getView(),
 				oElementBinding = oView.getElementBinding(),
-				oViewModel = this.getModel("detailView"),
+				oViewModel = this.getModel("viewModel"),
 				oAppViewModel = this.getModel("appView");
 
 			// No data for the binding
@@ -208,7 +208,7 @@ sap.ui.define([
 		_onMetadataLoaded: function () {
 			// Store original busy indicator delay for the detail view
 			var iOriginalViewBusyDelay = this.getView().getBusyIndicatorDelay(),
-				oViewModel = this.getModel("detailView");
+				oViewModel = this.getModel("viewModel");
 
 			// Make sure busy indicator is displayed immediately when
 			// detail view is displayed for the first time
@@ -265,7 +265,7 @@ sap.ui.define([
 		 * @private
 		 */
 		_callDelete: function (aPaths, fnAfterDeleted) {
-			var oViewModel = this.getModel("detailView");
+			var oViewModel = this.getModel("viewModel");
 			oViewModel.setProperty("/busy", true);
 			var fnFailed = function () {
 				this._oODataModel.setUseBatch(true);
