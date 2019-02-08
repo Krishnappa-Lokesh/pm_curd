@@ -22,7 +22,10 @@ sap.ui.define([
 			// between the busy indication for loading the view's meta data
 			var oViewModel = new JSONModel({
 				busy: false,
-				delay: 0
+				delay: 0,
+				enableCreate: false,
+				mode: "create",
+				viewTitle: ""
 			});
 
 			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
