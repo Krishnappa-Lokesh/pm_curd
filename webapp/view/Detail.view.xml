@@ -10,7 +10,9 @@
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
+			<!--
 			<ObjectHeader id="objectHeader" title="{Qmnum}"></ObjectHeader>
+			-->
 			
 		<core:Fragment id="formfragment" fragmentName="com.pe.pm.curd.pm_curd.view.FormEntity" type="XML" />
 		

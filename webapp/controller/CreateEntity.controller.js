@@ -204,7 +204,10 @@ sap.ui.define([
 		 * @private
 		 */
 		_validateSaveEnablement: function () {
-			var aInputControls = this._getFormFields(this.byId("newEntitySimpleForm"));
+			
+			var oFormControl = this.byId(sap.ui.core.Fragment.createId("formfragment", "newEntitySimpleForm"));
+			
+			var aInputControls = this._getFormFields( oFormControl  );
 			var oControl;
 			for (var m = 0; m < aInputControls.length; m++) {
 				oControl = aInputControls[m].control;

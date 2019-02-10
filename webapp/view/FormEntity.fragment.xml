@@ -9,24 +9,24 @@
 			labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024"
 			title="{= ${viewModel>/mode} === 'DISPLAY'? 'Display': 'New'}">
 			<f:content>
-				<Label text="Notification" required="true"/>
+				<Label text="Notification" required="false"/>
 				<Input name="Qmnum" id="Qmnum_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 					enabled="false" visible="true"
 					value="{ path: 'Qmnum', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:12, nullable:false } }"/>
 				<Label text="Description" required="true"/>
 				<Input name="Qmtxt" id="Qmtxt_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
-					enabled="false" visible="true"
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}"  visible="true"
 					value="{ path: 'Qmtxt', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
-				<Label text="Planning plant" required="true"/>
+				<Label text="Planning plant" required="false"/>
 				<Input name="Iwerk" id="Iwerk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 					enabled="false" visible="true"
 					value="{ path: 'Iwerk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:4, nullable:false } }"/>
 				<Label text="Functional loc." required="true"/>
 				<Input name="Tplnr" id="ShnFunctLoc_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
-					enabled="false" visible="true"
+					enabled="false" visible="true" 
 					value="{ path: 'Tplnr', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
 				<ComboBox xmlns="sap.m" id="cbFuncLoc" items="{valueHelp>/funcLocSet}" selectedKey="{Tplnr}" 
-					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}"	>
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}"	 change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Tplnr}" text="{valueHelp>Pltxt}" id="itemCbFuncLoc"/>
 				</ComboBox>
 				<Label text="Planner group" required="true"/>
@@ -34,7 +34,7 @@
 					enabled="false" visible="true"
 					value="{ path: 'Ingrp', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:3, nullable:false } }"/>
 				<ComboBox xmlns="sap.m" id="cbPlnrGrp" items="{valueHelp>/plnrGrpSet}" selectedKey="{Ingrp}"
-					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" >
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Ingrp}" text="{valueHelp>Innam}" id="itemCbPlnrGrp"/>
 				</ComboBox>
 				<Label text="Main WorkCtr" required="true"/>
@@ -42,7 +42,7 @@
 					enabled="false" visible="true"
 					value="{ path: 'Arbpl', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:8, nullable:false } }"/>
 				<ComboBox xmlns="sap.m" id="cbMnWrkCtr" items="{valueHelp>/mnWrkCtrSet}" selectedKey="{Arbpl}" 
-					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" >
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Arbpl}" text="{valueHelp>KtextUp}" id="itemCbMnWrkCtr"/>
 				</ComboBox >
 				<Label text="Priority" required="true"/>
@@ -50,15 +50,15 @@
 					enabled="false" visible="true"
 					value="{ path: 'Priok', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:1, nullable:false } }"/>
 				<ComboBox xmlns="sap.m" id="cbPriok" items="{valueHelp>/priortySet}" selectedKey="{Priok}"
-					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" >
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Priok}" text="{valueHelp>Priokx}" id="itemCbPriokx"/>
 				</ComboBox>
-				<Label text="Safety" required="true"/>
+				<Label text="Safety" required="false"/>
 				<Input name="Auswk" id="Auswk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 					enabled="false" visible="true"
 					value="{ path: 'Auswk', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:1, nullable:false } }"/>
 				<ComboBox xmlns="sap.m" id="cbAuswk" items="{valueHelp>/effectSet}" selectedKey="{Auswk}" 
-					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" >
+					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}"  change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Auswk}" text="{valueHelp>Auswkt}" id="itemCbAuswkt"/>
 				</ComboBox>
 				<!--
