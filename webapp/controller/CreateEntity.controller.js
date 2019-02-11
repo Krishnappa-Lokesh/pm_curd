@@ -24,7 +24,8 @@ sap.ui.define([
 				delay: 0,
 				busy: false,
 				mode: "create",
-				viewTitle: ""
+				viewTitle: "",
+				defaultPlant: 7490
 			});
 			this.setModel(this._oViewModel, "viewModel");
 
@@ -196,6 +197,7 @@ sap.ui.define([
 				success: this._fnEntityCreated.bind(this),
 				error: this._fnEntityCreationFailed.bind(this)
 			});
+			this._oODataModel.setProperty( oContext.sPath+'/Iwerk', this._oViewModel.getProperty('/defaultPlant'));
 			this.getView().setBindingContext(oContext);
 		},
 
