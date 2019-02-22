@@ -1,5 +1,5 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/model/GroupSortState",
+	"pmnotif/model/GroupSortState",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/thirdparty/sinon",
 	"sap/ui/thirdparty/sinon-qunit"

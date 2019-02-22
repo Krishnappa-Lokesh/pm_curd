@@ -1,14 +1,14 @@
 /*global location */
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/BaseController",
+	"pmnotif/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"com/pe/pm/curd/pm_curd/model/formatter",
+	"pmnotif/model/formatter",
 	"sap/m/MessageBox",
 	"sap/m/MessageToast"
 ], function (BaseController, JSONModel, formatter, MessageBox, MessageToast) {
 	"use strict";
 
-	return BaseController.extend("com.pe.pm.curd.pm_curd.controller.Detail", {
+	return BaseController.extend("pmnotif.controller.Detail", {
 
 		formatter: formatter,
 

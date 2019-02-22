@@ -9,27 +9,27 @@ QUnit.config.autostart = false;
 
 sap.ui.require([
 	"sap/ui/test/Opa5",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Common",
+	"pmnotif/test/integration/pages/Common",
 	"sap/ui/test/opaQunit",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/App",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Browser",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Master",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Detail",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Create",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/NotFound"
+	"pmnotif/test/integration/pages/App",
+	"pmnotif/test/integration/pages/Browser",
+	"pmnotif/test/integration/pages/Master",
+	"pmnotif/test/integration/pages/Detail",
+	"pmnotif/test/integration/pages/Create",
+	"pmnotif/test/integration/pages/NotFound"
 ], function (Opa5, Common) {
 	"use strict";
 	Opa5.extendConfig({
 		arrangements: new Common(),
-		viewNamespace: "com.pe.pm.curd.pm_curd.view."
+		viewNamespace: "pmnotif.view."
 	});
 
 	sap.ui.require([
-		"com/pe/pm/curd/pm_curd/test/integration/MasterJourney",
-		"com/pe/pm/curd/pm_curd/test/integration/NavigationJourney",
-		"com/pe/pm/curd/pm_curd/test/integration/NotFoundJourney",
-		"com/pe/pm/curd/pm_curd/test/integration/BusyJourney",
-		"com/pe/pm/curd/pm_curd/test/integration/FLPIntegrationJourney"
+		"pmnotif/test/integration/MasterJourney",
+		"pmnotif/test/integration/NavigationJourney",
+		"pmnotif/test/integration/NotFoundJourney",
+		"pmnotif/test/integration/BusyJourney",
+		"pmnotif/test/integration/FLPIntegrationJourney"
 	], function () {
 		QUnit.start();
 	});

@@ -1,12 +1,12 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/BaseController",
+	"pmnotif/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"sap/m/MessageBox"
 
 ], function (BaseController, JSONModel, MessageBox) {
 	"use strict";
 
-	return BaseController.extend("com.pe.pm.curd.pm_curd.controller.CreateEntity", {
+	return BaseController.extend("pmnotif.controller.CreateEntity", {
 
 		_oBinding: {},
 

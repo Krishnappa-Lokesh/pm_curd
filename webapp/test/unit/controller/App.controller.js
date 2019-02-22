@@ -1,5 +1,5 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/App.controller",
+	"pmnotif/controller/App.controller",
 	"sap/m/SplitApp",
 	"sap/ui/core/Control",
 	"sap/ui/model/json/JSONModel",

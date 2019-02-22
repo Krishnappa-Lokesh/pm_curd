@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.pe.pm.curd.pm_curd.controller.Detail" 
+<mvc:View controllerName="pmnotif.controller.Detail" 
 			xmlns="sap.m" 
 			xmlns:core="sap.ui.core" 
 			xmlns:f="sap.ui.layout.form" 
@@ -14,7 +14,7 @@
 			<ObjectHeader id="objectHeader" title="{Qmnum}"></ObjectHeader>
 			-->
 			
-		<core:Fragment id="formfragment" fragmentName="com.pe.pm.curd.pm_curd.view.FormEntity" type="XML" />
+		<core:Fragment id="formfragment" fragmentName="pmnotif.view.FormEntity" type="XML" />
 		
 
 		</semantic:content>

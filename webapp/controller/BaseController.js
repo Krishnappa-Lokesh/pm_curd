@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, History) {
 	"use strict";
 
-	return Controller.extend("com.pe.pm.curd.pm_curd.controller.BaseController", {
+	return Controller.extend("pmnotif.controller.BaseController", {
 		/**
 		 * Convenience method for accessing the router in every controller of the application.
 		 * @public

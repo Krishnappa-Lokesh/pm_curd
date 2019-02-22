@@ -4,7 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	function getFrameUrl(sHash, sUrlParameters) {
-		var sUrl = jQuery.sap.getResourcePath("com/pe/pm/curd/pm_curd/app", ".html");
+		var sUrl = jQuery.sap.getResourcePath("pmnotif/app", ".html");
 		sHash = sHash || "";
 		sUrlParameters = sUrlParameters ? "?" + sUrlParameters : "";
 
@@ -17,7 +17,7 @@ sap.ui.define([
 		return sUrl + sUrlParameters + sHash;
 	}
 
-	return Opa5.extend("com.pe.pm.curd.pm_curd.test.integration.pages.Common", {
+	return Opa5.extend("pmnotif.test.integration.pages.Common", {
 
 		iStartTheApp: function (oOptions) {
 			oOptions = oOptions || {};
@@ -62,7 +62,7 @@ sap.ui.define([
 
 		getMockServer: function () {
 			return new Promise(function (success) {
-				Opa5.getWindow().sap.ui.require(["com/pe/pm/curd/pm_curd/localService/mockserver"], function (mockserver) {
+				Opa5.getWindow().sap.ui.require(["pmnotif/localService/mockserver"], function (mockserver) {
 					success(mockserver.getMockServer());
 				});
 			});

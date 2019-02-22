@@ -1,5 +1,5 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/model/models",
+	"pmnotif/model/models",
 	"sap/ui/thirdparty/sinon",
 	"sap/ui/thirdparty/sinon-qunit"
 ], function (models) {

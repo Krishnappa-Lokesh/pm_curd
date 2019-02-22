@@ -1,6 +1,6 @@
 sap.ui.define([
 	"sap/m/Text",
-	"com/pe/pm/curd/pm_curd/model/formatter"
+	"pmnotif/model/formatter"
 ], function (Text, formatter) {
 	"use strict";
 

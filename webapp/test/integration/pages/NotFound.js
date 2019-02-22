@@ -1,6 +1,6 @@
 sap.ui.define([
 	"sap/ui/test/Opa5",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Common"
+	"pmnotif/test/integration/pages/Common"
 ], function (Opa5, Common) {
 	"use strict";
 

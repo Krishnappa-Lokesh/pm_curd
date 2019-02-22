@@ -1,17 +1,17 @@
 /*global history */
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/BaseController",
+	"pmnotif/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	"sap/m/GroupHeaderListItem",
 	"sap/ui/Device",
-	"com/pe/pm/curd/pm_curd/model/formatter",
+	"pmnotif/model/formatter",
 	"sap/m/MessageBox"
 ], function (BaseController, JSONModel, Filter, FilterOperator, GroupHeaderListItem, Device, formatter, MessageBox) {
 	"use strict";
 
-	return BaseController.extend("com.pe.pm.curd.pm_curd.controller.Master", {
+	return BaseController.extend("pmnotif.controller.Master", {
 
 		formatter: formatter,
 

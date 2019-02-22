@@ -1,7 +1,7 @@
 {
 	"_version": "1.8.0",
 	"sap.app": {
-		"id": "com.pe.pm.curd.pm_curd",
+		"id": "pmnotif",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
@@ -26,7 +26,6 @@
 					"localUri": "localService/metadata_vh.xml"
 				}
 			}
-
 		},
 		"sourceTemplate": {
 			"id": "html5projecttemplates.2masterdetailcrud",
@@ -55,20 +54,20 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "com.pe.pm.curd.pm_curd.view.App",
+			"viewName": "pmnotif.view.App",
 			"type": "XML",
 			"id": "app"
 		},
 		"dependencies": {
 			"minUI5Version": "1.30.0",
 			"libs": {
-				"sap.ui.core": {},
-				"sap.m": {},
-				"sap.ui.layout": {},
-				"sap.f": {},
-				"sap.ushell": {},
 				"sap.collaboration": {},
+				"sap.f": {},
+				"sap.m": {},
 				"sap.ui.comp": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
 				"sap.uxap": {}
 			}
 		},
@@ -80,7 +79,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "com.pe.pm.curd.pm_curd.i18n.i18n"
+					"bundleName": "pmnotif.i18n.i18n"
 				}
 			},
 			"": {
@@ -101,13 +100,12 @@
 					"defaultBindingMode": "OneWay"
 				}
 			}
-
 		},
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
-				"viewPath": "com.pe.pm.curd.pm_curd.view",
+				"viewPath": "pmnotif.view",
 				"controlId": "idAppControl",
 				"controlAggregation": "detailPages",
 				"bypassed": {
@@ -166,5 +164,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/z_pm_curd/webapp",
+		"_version": "1.1.0"
 	}
 }

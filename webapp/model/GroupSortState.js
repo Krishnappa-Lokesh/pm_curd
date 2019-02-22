@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (BaseObject, Sorter) {
 	"use strict";
 
-	return BaseObject.extend("com.pe.pm.curd.pm_curd.model.GroupSortState", {
+	return BaseObject.extend("pmnotif.model.GroupSortState", {
 
 		/**
 		 * Creates sorters and groupers for the master list.
@@ -13,7 +13,7 @@ sap.ui.define([
 		 * If a user ungroups, the sorting will be reset to the default sorting.
 		 * @class
 		 * @public
-		 * @alias com.pe.pm.curd.pm_curd.model.GroupSortState
+		 * @alias pmnotif.model.GroupSortState
 		 */
 		constructor: function (oViewModel, fnGroupFunction) {
 			this._oViewModel = oViewModel;

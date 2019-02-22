@@ -1,13 +1,13 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"com/pe/pm/curd/pm_curd/model/models",
-	"com/pe/pm/curd/pm_curd/controller/ListSelector",
-	"com/pe/pm/curd/pm_curd/controller/ErrorHandler"
+	"pmnotif/model/models",
+	"pmnotif/controller/ListSelector",
+	"pmnotif/controller/ErrorHandler"
 ], function (UIComponent, Device, models, ListSelector, ErrorHandler) {
 	"use strict";
 
-	return UIComponent.extend("com.pe.pm.curd.pm_curd.Component", {
+	return UIComponent.extend("pmnotif.Component", {
 
 		metadata: {
 			manifest: "json"

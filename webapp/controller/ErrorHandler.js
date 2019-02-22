@@ -4,14 +4,14 @@ sap.ui.define([
 ], function (UI5Object, MessageBox) {
 	"use strict";
 
-	return UI5Object.extend("com.pe.pm.curd.pm_curd.controller.ErrorHandler", {
+	return UI5Object.extend("pmnotif.controller.ErrorHandler", {
 
 		/**
 		 * Handles application errors by automatically attaching to the model events and displaying errors when needed.
 		 * @class
 		 * @param {sap.ui.core.UIComponent} oComponent reference to the app's component
 		 * @public
-		 * @alias com.pe.pm.curd.pm_curd.controller.ErrorHandler
+		 * @alias pmnotif.controller.ErrorHandler
 		 */
 		constructor: function (oComponent) {
 			this._oResourceBundle = oComponent.getModel("i18n").getResourceBundle();

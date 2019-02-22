@@ -45,6 +45,7 @@
 					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Arbpl}" text="{valueHelp>KtextUp}" id="itemCbMnWrkCtr"/>
 				</ComboBox >
+				<!--
 				<Label text="Priority" required="true"/>
 				<Input name="Priok" id="Priok_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 					enabled="false" visible="true"
@@ -53,6 +54,7 @@
 					enabled="{= ${viewModel>/mode} === 'DISPLAY'? false: true}" change="_validateSaveEnablement" >
 					<core:Item xmlns:core="sap.ui.core" key="{valueHelp>Priok}" text="{valueHelp>Priokx}" id="itemCbPriokx"/>
 				</ComboBox>
+				-->
 				<Label text="Safety" required="false"/>
 				<Input name="Auswk" id="Auswk_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 					enabled="false" visible="true"

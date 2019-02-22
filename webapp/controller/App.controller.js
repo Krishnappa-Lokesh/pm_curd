@@ -1,10 +1,10 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/BaseController",
+	"pmnotif/controller/BaseController",
 	"sap/ui/model/json/JSONModel"
 ], function (BaseController, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("com.pe.pm.curd.pm_curd.controller.App", {
+	return BaseController.extend("pmnotif.controller.App", {
 
 		onInit: function () {
 			var oViewModel,

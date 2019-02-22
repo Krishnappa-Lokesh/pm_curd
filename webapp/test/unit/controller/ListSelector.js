@@ -1,5 +1,5 @@
 sap.ui.define([
-	"com/pe/pm/curd/pm_curd/controller/ListSelector",
+	"pmnotif/controller/ListSelector",
 	"sap/ui/thirdparty/sinon",
 	"sap/ui/thirdparty/sinon-qunit"
 ], function (ListSelector) {

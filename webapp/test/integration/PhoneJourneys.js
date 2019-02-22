@@ -5,24 +5,24 @@ QUnit.config.autostart = false;
 
 sap.ui.require([
 	"sap/ui/test/Opa5",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Common",
+	"pmnotif/test/integration/pages/Common",
 	"sap/ui/test/opaQunit",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/App",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Browser",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Master",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/Detail",
-	"com/pe/pm/curd/pm_curd/test/integration/pages/NotFound"
+	"pmnotif/test/integration/pages/App",
+	"pmnotif/test/integration/pages/Browser",
+	"pmnotif/test/integration/pages/Master",
+	"pmnotif/test/integration/pages/Detail",
+	"pmnotif/test/integration/pages/NotFound"
 ], function (Opa5, Common) {
 	"use strict";
 	Opa5.extendConfig({
 		arrangements: new Common(),
-		viewNamespace: "com.pe.pm.curd.pm_curd.view."
+		viewNamespace: "pmnotif.view."
 	});
 
 	sap.ui.require([
-		"com/pe/pm/curd/pm_curd/test/integration/NavigationJourneyPhone",
-		"com/pe/pm/curd/pm_curd/test/integration/NotFoundJourneyPhone",
-		"com/pe/pm/curd/pm_curd/test/integration/BusyJourneyPhone"
+		"pmnotif/test/integration/NavigationJourneyPhone",
+		"pmnotif/test/integration/NotFoundJourneyPhone",
+		"pmnotif/test/integration/BusyJourneyPhone"
 	], function () {
 		QUnit.start();
 	});
