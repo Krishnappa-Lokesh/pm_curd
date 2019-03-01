@@ -18,12 +18,14 @@
 		
 
 		</semantic:content>
+		<!--
 		<semantic:editAction>
 			<semantic:EditAction id="edit" press="onEdit"/>
 		</semantic:editAction>
 		<semantic:customFooterContent>
 			<Button enabled="true" id="deleteButton" press="onDelete" text="Delete"/>
 		</semantic:customFooterContent>
+		-->
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
