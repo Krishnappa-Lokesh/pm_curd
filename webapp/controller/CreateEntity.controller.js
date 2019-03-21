@@ -13,6 +13,7 @@ sap.ui.define([
 		/* =========================================================== */
 		/* lifecycle methods                                           */
 		/* =========================================================== */
+		
 		onInit: function () {
 			var that = this;
 			this.getRouter().getTargets().getTarget("create").attachDisplay(null, this._onDisplay, this);
