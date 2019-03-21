@@ -25,7 +25,7 @@ sap.ui.define([
 				busy: false,
 				mode: "create",
 				viewTitle: "",
-				defaultPlant: 7490
+				defaultPlant: "7490"
 			});
 			this.setModel(this._oViewModel, "viewModel");
 
